@@ -1,0 +1,34 @@
+
+.controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.btnAdd {
+    background-color: green;
+}
+
+.btnRemove {
+    background-color: red;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.tittleAdd {
+    font-size: 1.4rem;
+}
+
+span {
+    font-size: 2rem;
+}
+
+.toastAdd {
+    background-color: green!important;
+    color: white!important;
+}
+
+.toastRemove {
+    background-color: red!important;
+    color: white!important;
+}
+
