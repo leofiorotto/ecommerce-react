@@ -13,9 +13,9 @@ function App() {
      <BrowserRouter>
         <NavBar />
         <Routes>
-          <Route path='/Entrega1-React-Fiorotto/' element={<ItemListContainer greeting={'Listado de todos los NFT`s'}/> }/>
-          <Route path='/Entrega1-React-Fiorotto/category/:categoryId' element={<ItemListContainer greeting={'Productos por categoria'}/>} />
-          <Route path='/Entrega1-React-Fiorotto/detail/:productId' element={<ItemDetailContainer />} />
+          <Route path='/ecommerce-react/' element={<ItemListContainer greeting={"WELCOME"}/> }/>
+          <Route path='/ecommerce-react/category/:categoryId' element={<ItemListContainer greeting={'PRODUCTS BY CATEGORY'}/>} />
+          <Route path='/ecommerce-react/detail/:productId' element={<ItemDetailContainer />} />
           <Route path='*' element={<h1>Error 404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>

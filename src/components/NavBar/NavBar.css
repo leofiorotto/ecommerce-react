@@ -3,8 +3,8 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0f0f0;
     color: rgb(0, 0, 0);
+    background-color: #213547;
 }
 
 .container-nav {
@@ -37,4 +37,6 @@ nav button:hover {
 
 .LogoImg {
     cursor: pointer;
+    /* height: 100px; */
+    width: 200px;
 }

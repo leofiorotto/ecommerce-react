@@ -9,11 +9,11 @@ const NavBar = () => {
     const navigate = useNavigate()
     return (
         <nav>
-            <img src={logo} alt="Ecommerce" className='LogoImg' onClick={() => navigate('/Entrega1-React-Fiorotto')} />
+            <img src={logo} alt="Ecommerce" className='LogoImg' onClick={() => navigate('/ecommerce-react/')} />
             <div className='container-nav'>
-                <NavLink to='/Entrega1-React-Fiorotto/category/DeGod' className={({ isActive }) => isActive ? classes.active : classes.inactive }>DeGod</NavLink>
-                <NavLink to='/Entrega1-React-Fiorotto/category/Mirascape' className={({ isActive }) => isActive ? classes.active : classes.inactive }>Mirascape</NavLink>
-                <NavLink to='/Entrega1-React-Fiorotto/category/Tower' className={({ isActive }) => isActive ? classes.active : classes.inactive }>Tower</NavLink>
+                <NavLink to='/ecommerce-react/category/DeGod' className={({ isActive }) => isActive ? classes.active : classes.inactive }>DeGod</NavLink>
+                <NavLink to='/ecommerce-react/category/Mirascape' className={({ isActive }) => isActive ? classes.active : classes.inactive }>Mirascape</NavLink>
+                <NavLink to='/ecommerce-react/category/Tower' className={({ isActive }) => isActive ? classes.active : classes.inactive }>Tower</NavLink>
             </div>
             <CartWidget />
         </nav>
