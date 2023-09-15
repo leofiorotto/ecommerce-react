@@ -39,13 +39,13 @@
     background-color: #2081e2;
     border-radius: 0 0 1rem 1rem;
     color: white;
-    width: 50%;
     margin: auto;
     position: absolute;
     top: 95%;
     height: 3rem;
-    width: 100%;
+    width: 101%;
     display: none;
+    left: -1px;
   }
 
   .Item-footer > * {

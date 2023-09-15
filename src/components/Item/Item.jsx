@@ -26,7 +26,7 @@ const Item = ({ id, name, img, price, category }) => {
       </div>
 
         <footer className='Item-footer'>
-        <Link to={`/Entrega1-React-Fiorotto/detail/${id}`} >VER</Link>
+        <Link to={`/ecommerce-react/detail/${id}`} >VER</Link>
         </footer>
         
       </article>
