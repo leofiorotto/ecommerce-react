@@ -1,8 +1,4 @@
-# React + Vite
+![image](https://github.com/leofiorotto/ecommerce-react/assets/70485779/23b62810-5416-4692-9c67-b3da34c2013f)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+e-commerce web made with react, vite, firebase
