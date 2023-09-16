@@ -1,37 +1,56 @@
 import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
+import ethlogo from '../../assets/eth-logo.png'
+import pricehistory from '../../assets/price-history.png'
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-const ItemDetail = ({ id, name, category, img, price, stock, description, ca, scanCollection, NFTcollection}) => {
+
+const ItemDetail = ({ id, name, category, img, price, stock, scanCollection, NFTcollection}) => {
+    const [addCounter, setAddCounter] = useState (0);
     
     const handleOnAdd = (count) => {
-        const objProductToAdd = {
-            id, name, price, count
-        }
+        setAddCounter(count)
     }
 
     return (
-        <article className='ItemDetailContainer'>
-            <header>
-                <img src={img} alt={name}/>
-            </header>
-            <div className='DescriptionDetail'>
-                <picture>
-                    <h2>{name}</h2>
-                </picture>
+        <>
+            <h2 className='tittle-detail'>{name}</h2>
+            <article className='ItemDetailContainer'>
+                <header>
+                    <img className='img-detail' src={img} alt={name}/>
+                </header>
+                <div className='DescriptionDetail'>
+                    <section>
+                        <div className='price-detail'>
+                            <b className='price'>Price: {price} ETH</b><br />
+                            <img src={ethlogo} alt="eth-logo" style={{ width: '60px', height: '50px' }} /><br />
+                        </div>
+                        <div className='info-detail'>
+                            <a href={scanCollection}>Contract {name}</a><br />
+                            <a href={NFTcollection}>View history of {name}</a><br />
+                        </div>
+                        <div className='price-history'>
+                            <h3>Price history</h3>
+                            <img className='img-price-history' src={pricehistory} alt="" />
+                        </div>
+                        <p style={{ color:'white', margin:'4rem'}}>{name} is a digital art collection and global community of creators, developers, entrepreneurs, athletes, artists, experimenters and innovators.</p>
+                    </section> 
 
-                <section>
-                    <b className='price'>Precio: {price} ETH</b><br />
-                    <b>Contract Address: {ca}</b><br />
-                    <a href={scanCollection}>Contract DeGods</a><br />
-                    <a href={NFTcollection}>Ver historial e información de {name}</a><br />
-                </section> 
+                             <footer>
+                                {
+                                    addCounter === 0 ? (
+                                        <ItemCount onAdd={handleOnAdd} stock={stock}/>
+                                    ) : (
+                                        <Link to='/cart'>Finalizar compra</Link>
+                                    )
+                                }
+                            </footer>
 
-                <footer>
-                    <ItemCount onAdd={handleOnAdd} stock={stock}/>
-                </footer>
-            </div>
+                </div>
 
-        </article>
+            </article>
+        </>
     )
 }
 

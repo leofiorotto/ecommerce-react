@@ -8,21 +8,26 @@ const Item = ({ id, name, img, price, category }) => {
   return (
     <article className="Item">
       <div className='Container'>
-        <header>
-          <h2>{name}</h2>
-        </header>
 
         <picture>
           <img src={img} alt={name} />
         </picture>
 
-        <section>
-          <p>Categoria: {category}</p>
-        </section>
+        <div className='contenido-container'>
+          <header>
+            <h2>{name}</h2>
+          </header>
 
-        <section>
-          <p>Precio: {price} ETH</p>
-        </section>
+          <section>
+            <p>Categoria: {category}</p>
+          </section>
+
+          <section>
+            <p>Precio: {price} ETH</p>
+          </section>
+
+        </div>
+
       </div>
 
         <footer className='Item-footer'>

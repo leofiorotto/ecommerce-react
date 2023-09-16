@@ -1,31 +1,23 @@
 section {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: left;
     text-align: left;
 }
 
  
  .ItemDetailContainer {
-    margin-top: 10%;
+    margin-top: 4%;
     width: 80%;
     display: flex;
     justify-content: left;
     margin-left: 2rem;
     position: relative;
+    gap: 3rem;
 
 
  }
 
  .ItemDetailContainer img {
     width: 40rem;
-    display: flex;
-
-    border: 1px solid grey;
  }
-
-
 
  .DescriptionDetail {
     width: 100%;
@@ -33,7 +25,20 @@ section {
     flex-direction: column;
     justify-content: left;
     align-items: center;
- }
+    margin-left: 2rem;
+
+}
+
+.tittle-detail {
+   color: white;
+   font-size: 2rem;
+    border:1px solid white;
+    border-top: none;
+    width:30%;
+    margin:auto;
+    padding:2rem;
+    border-radius:0 0 1rem 1rem;
+}
 
  footer{
     position: absolute;
@@ -41,10 +46,50 @@ section {
  }
 
  picture {
-    font-size: 2rem;
-    color: blue;
+   text-align: center;
+   font-size: 2rem;
+   color: white;
  }
  
  .price {
     font-size: 2rem;
+    color: white;
+ }
+ 
+ .img-detail {
+   border-radius: 1rem;
+   border: none;
+ }
+
+
+ .info-detail {
+   display: flex;
+   gap: 1rem;
+   cursor: pointer;
+ }
+ .price-detail {
+   display: flex;
+   gap: 0.5rem;
+   margin: 2rem;
+   margin-left: 0;
+
+ }
+
+ .price-history {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: black;
+   background-color: aliceblue;
+   margin-top: 3rem;
+   border-radius: 0 0 1rem 1rem;
+   width: 100%;
+
+ }
+
+
+ .img-price-history {
+   border-radius: 0 0 1rem 1rem;
+   min-width: 100%;
  }

@@ -5,6 +5,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Cart from './components/Cart/Cart';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path='/ecommerce-react/' element={<ItemListContainer greeting={"WELCOME"}/> }/>
           <Route path='/ecommerce-react/category/:categoryId' element={<ItemListContainer greeting={'PRODUCTS BY CATEGORY'}/>} />
           <Route path='/ecommerce-react/detail/:productId' element={<ItemDetailContainer />} />
+          <Route path='/ecommerce-react/cart' element={<Cart />} />
           <Route path='*' element={<h1>Error 404 Not Found</h1>} />
         </Routes>
       </BrowserRouter>

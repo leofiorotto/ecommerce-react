@@ -1,20 +1,25 @@
 /* Estilos para Item */
 .Item {
-    border: 1px solid #ccc;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     position: relative;
   }
-  
+/*   
   .Container {
+  }
+   */
+  .contenido-container {
     padding: 20px;
+    padding-top: 0px;
+
   }
   
   .Item img {
     width: 256px;
     max-width: 100%;
     height: auto;
+    border-radius: 0.9rem 0.9rem 0 0;
   }
   
   .Item h2 {
