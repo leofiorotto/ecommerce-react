@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom"
 import { db } from "../../services/firebase/firebaseConfig"
 import { getDoc, doc, QueryDocumentSnapshot } from "firebase/firestore"
 import './ItemDetailContainer.css'
+import Footer from "../footer/footer"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)
@@ -41,12 +42,14 @@ const ItemDetailContainer = () => {
     }, [productId])
 
     if(loading) {
-        return <h1>Cargando Producto</h1>
+        return <span className="loader"></span>
     }
 
     return (
         <main className='detailContainer'>
             <ItemDetail {...product}/>
+            <Footer />
+
         </main>
     )
 }

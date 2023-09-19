@@ -4,16 +4,21 @@ import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
 import { useParams } from "react-router-dom"
 import { db } from "../../services/firebase/firebaseConfig"
+import Footer from "../footer/footer"
 
 import { getDocs, collection, query, where } from "firebase/firestore"
 
 const ItemListContainer = ({greeting}) => {
 
     const [products, setProducts] = useState([])
+    const [loading, setLoading] = useState(true)
+    
+
 
     const { categoryId } = useParams()
 
     useEffect ( () => {
+        setLoading(true)
 
 
         const productsRef = !categoryId
@@ -28,6 +33,8 @@ const ItemListContainer = ({greeting}) => {
                 setProducts(productsAdapted);
             }).catch (error => {
                 console.error(error)
+            }).finally (() => {
+                setLoading(false)
             })
     
 
@@ -42,11 +49,19 @@ const ItemListContainer = ({greeting}) => {
         //     })
     }, [categoryId])
 
+    if(loading) {
+        return <span className="loader"></span>
+    }
+
     return (
+    <>
         <div className="ItemListContainer">
             <h1>{greeting}</h1>
             <ItemList products={products} />
         </div>
+        <Footer />
+    </>
+
     )
 }
 

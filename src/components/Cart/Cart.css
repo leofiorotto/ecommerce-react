@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.container-cart {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    margin-bottom: 2.2rem;
+    font-family: 'Arvo', serif;
+    width: 70%;
+    margin: auto;
+    padding: 1.25rem;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, #213547 0%, white 50%, white 50%, #213547 100%);
+    border-image-slice: 1;}
+
+.img-cart {
+    border-radius: 50%;
+    width: 150px
+    
+}
+
+.product-cart {
+    display: flex;
+    gap: 1rem;
+}
+
+.tittle-cart {
+    font-size: 1.3rem;
+}
+
+.container-price {
+    display: flex;
+    font-size: 1.5rem;
+}
+
+.img-eth-cart {
+    margin-top: 1.4rem;
+    height: 40px;
+    width: 40px;
+}
+
+.btn-remove {
+    background-color: rgb(243, 120, 120);
+    height: 20%;
+    margin: auto 0;
+    width: 10%;
+}
+
+.total {
+    color: white;
+    font-family:'Arvo', serif;
+}
+
+.btn-checkout {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.section-bottom {
+    margin-bottom: 4rem;
+}
+
+.units {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25%;
+}

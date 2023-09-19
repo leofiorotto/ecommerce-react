@@ -6,8 +6,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
 import { Link } from 'react-router-dom';
 
-export default function App() {
-  const [counter, setCounter] = useState(0);
+
+const ItemCount = ({ stock, onAdd }) => {
+  const [counter, setCounter] = useState(1);
   const [mostrarCarrito, setMostrarCarrito] = useState(false);
 
   const MySwal = withReactContent(Swal);
@@ -36,25 +37,24 @@ export default function App() {
   const ClickBuy = () => {
     AlertAddtoCart();
     setMostrarCarrito(true);
+    onAdd(counter)
   };
-
-  // const IrAlCarrito = () => {
-  //   // Agrega aquí la lógica para ir al carrito
-  // };
 
   return (
     <div>
       {mostrarCarrito ? (
-        <Link to='/ecommerce-react/cart' style={{background:'white', color:'black', padding:'1rem', borderRadius:'1rem'}} >Ir al carrito</Link>
+        <Link to='/ecommerce-react/cart' style={{background:'white', color:'black', padding:'1rem', borderRadius:'1rem'}} >Go to cart</Link>
       ) : (
         <div className='controls'>
           <button onClick={increase} className='btnAdd'>+</button>
           <span className='counter'>{counter}</span>
           <button onClick={decrease} className='btnRemove'>-</button>
           <ToastContainer autoClose={1000}/>
-          <button className='tittleAdd' onClick={ClickBuy}>Buy now</button>
+          <button className='tittleAdd' onClick={ClickBuy}>Add to cart</button>
         </div>
       )}
     </div>
   );
 }
+
+export default ItemCount

@@ -2,6 +2,7 @@
 .controls {
     display: flex;
     gap: 1rem;
+   width: 100%;
 }
 
 .btnAdd {
@@ -16,6 +17,7 @@
 
 .tittleAdd {
     font-size: 1.4rem;
+    width: 250px;
 }
 
 span {
