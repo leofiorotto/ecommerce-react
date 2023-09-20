@@ -10,14 +10,15 @@
     width: 70%;
     margin: auto;
     padding: 1.25rem;
+    border-top: 1px solid;
     border-bottom: 1px solid;
     border-image: linear-gradient(to right, #213547 0%, white 50%, white 50%, #213547 100%);
-    border-image-slice: 1;}
+    border-image-slice: 1;
+}
 
 .img-cart {
     border-radius: 50%;
     width: 150px
-    
 }
 
 .product-cart {
@@ -45,6 +46,11 @@
     height: 20%;
     margin: auto 0;
     width: 10%;
+}
+
+.btn-clear {
+    background-color: red;
+    color: white;
 }
 
 .total {

@@ -5,7 +5,7 @@ import ethLogo from '../../assets/eth-logo.png';
 import Footer from '../footer/footer';
 
 const Cart = () => {
-    const { cart, removeItem, total } = useCart();
+    const { cart, removeItem, clearCart, total } = useCart();
 
     if (cart.length === 0) {
         return (
@@ -15,9 +15,17 @@ const Cart = () => {
         );
     }
 
+    let totalPrice = 0;
+    for (const prod of cart) {
+        totalPrice += prod.price * prod.quantity;
+    }
+
     return (
         <>
-            <h1 style={{color:'white', fontFamily: 'Arvo'}}> Your cart</h1>
+            <div style={{display:'flex', justifyContent:'space-around',alignItems:'center', marginLeft:'28%'}}>
+                <h1 style={{color:'white', fontFamily: 'Arvo'}}> Your cart</h1>
+                <button className='btn-clear' onClick={() => clearCart()}>Clear all</button><br /><br />
+            </div>
             <section>
                 { cart.map(prod => {
                     return (
@@ -41,10 +49,13 @@ const Cart = () => {
             </section>
             <div className='section-bottom'>
                 <div style={{display:'flex', justifyContent:'center', marginBottom:'1rem'}}>
-                    <h2 className='total'>Total: {total}</h2>
+                    <div style={{marginRight:'2rem'}}> 
+                        <h2 className='total'>Total units: {total}</h2>
+                    </div>
+                    <h2 className='total'>Total: {totalPrice}</h2>
                     <img className='img-eth-cart' src={ethLogo} alt="" />
                 </div>
-                <Link className='btn-checkout' to='/checkout'>Checkout</Link>   
+                <Link className='btn-checkout' to='/ecommerce-react/checkout'>Go to buy</Link>   
 
             </div>
 

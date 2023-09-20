@@ -38,36 +38,28 @@ const ItemDetail = ({ id, name, category, img, price, stock, scanCollection, NFT
                 <div className='DescriptionDetail'>
                     <Link to={`/ecommerce-react/category/${category}`}>Back to collection</Link>
                     <Link to={`/ecommerce-react/`}>Back to home</Link>
-                    <section>
+                    <section> 
                         <div className='price-detail'>
-                            <b className='price'>Price: {price} ETH</b><br />
+                            <b className='price'>{price} ETH</b><br />
                             <img src={ethlogo} alt="eth-logo" style={{ width: '60px', height: '50px' }} /><br />
                         </div>
                         <div className='info-detail'>
                             <a href={scanCollection}>Contract {category}</a><br />
                             <a href={NFTcollection}>View history of {name}</a><br />
                         </div>
+                        <div style={{ display:'flex',gap:'1rem',color:'white',fontSize:'1.1rem', marginBottom: '1%'}}> 
+                            <p>👁️ 42 view</p>
+                            <p>♡ 1 favorite</p>
+                        </div>
+                        <ItemCount onAdd={handleOnAdd} stock={stock}/>
                         <div className='price-history'>
                             <button className='btn-price-history' onClick={toggleImagen} >Price history 🡳</button>
                             {mostrarImagen && (
                                 <img className='img-price-history' src={pricehistory} alt="" />
                             )}
                         </div>
-                        <p style={{ color:'white', margin:'4rem'}}>{category} is a digital art collection and global community of creators, developers, entrepreneurs, athletes, artists, experimenters and innovators.</p>
+                        <p style={{ color:'grey',marginTop:'2rem' , marginBottom:'4rem'}}>{category} is a digital art collection and global community of creators, developers, entrepreneurs, athletes, artists, experimenters and innovators.</p>
                     </section> 
-
-                             <footer>
-                             <ItemCount onAdd={handleOnAdd} stock={stock}/>
-
-                                {/* {
-                                    addCounter === 0 ? (
-                                        <ItemCount onAdd={handleOnAdd} stock={stock}/>
-                                    ) : (
-                                        <Link to='/cart'>Finalizar compra</Link>
-                                    )
-                                } */}
-                            </footer>
-
                 </div>
             </article>
             </div>

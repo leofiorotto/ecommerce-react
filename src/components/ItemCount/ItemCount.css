@@ -2,10 +2,15 @@
 .controls {
     display: flex;
     gap: 1rem;
-   width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
 }
 
 .btnAdd {
+    font-size: 1.3rem;
     background-color: green;
 }
 
