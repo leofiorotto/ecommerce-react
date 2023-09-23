@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { collection, query, where, documentId, getDocs, writeBatch, addDoc } from 'firebase/firestore';
 import { db } from '../../services/firebase/firebaseConfig';
 import Form from '../Form/Form';
 import { useCart } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
+import './Checkout.css'
+
 
 const Checkout = () => {
   const [loading, setLoading] = useState(false);
   const [orderId, setOrderId] = useState('');
-
   const { cart, total, clearCart } = useCart();
   const navigate = useNavigate();
+
+  const [name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
+
+  const [orderedItems, setOrderedItems] = useState([]);
+
 
   const createOrder = async ({ name, lastname, phone, email }) => {
     setLoading(true);
@@ -24,7 +33,10 @@ const Checkout = () => {
         total: total
       }
 
-      console.log(cart);
+      setName(name)
+      setLastname(lastname)
+      setPhone(phone)
+      setEmail(email)
 
       const batch = writeBatch(db);
       const outOfStock = [];
@@ -47,14 +59,13 @@ const Checkout = () => {
           outOfStock.push({ id: doc.id, ...fields });
         }
       });
-
       if (outOfStock.length === 0) {
         const orderRef = collection(db, 'orders');
         const { id } = await addDoc(orderRef, objOrder);
         batch.commit();
+        setOrderedItems(cart);
         clearCart();
-        setOrderId(id);
-        console.log('el numero de orden es: ' + id);
+        setOrderId(id);      
       } else {
         console.error('Hay productos fuera de stock...');
       }
@@ -64,19 +75,48 @@ const Checkout = () => {
       setLoading(false);
     }
   }
-
+  
+  
   if (loading) {
-    return <h1>Se esta generando su orden...</h1>
-  }
-
+    return <h1>Generating your order</h1>
+  }  
   if (orderId) {
     return (
-        <>
-            <h1>El id de su orden es: {orderId}</h1>
-            <h3>name: {name}</h3>
-        </>
+      <>
+      <h1>Details of your purchase</h1>
+      <h2 className='orderid'>Your order id is: <br /> <b>{orderId}</b></h2>
+      <div className='container-checkpoint'>
+      <div className='final-form'>
+        <h2>Your data:</h2>
+        <p>Name: {name}</p>
+        <p>Lastname: {lastname}</p>
+        <p>Phone: {phone}</p>
+        <p>Email: {email}</p>
+      </div>
+      <div className='final-cart'>
+        <h2>Purchased products:</h2>
+        {orderedItems.map(item => (
+          <div className='final-detail-product' key={item.id}>
+            <img src={item.img} alt="img-prod" />
+            <div>
+              <p>Product: {item.name}</p>
+              <p>Quantity: {item.quantity}</p>
+              <p>Price: ${item.price}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+
+      </div>
+        <h1>Thanks for your purchase</h1>
+     
+
+    </>
     ); 
-}
+  }
+
+
 
   return (
     <>

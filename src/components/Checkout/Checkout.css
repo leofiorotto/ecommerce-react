@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.container-checkpoint {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.final-form {
+    color: white;
+    font-family: 'Arvo', serif;
+    border: 1px solid rgb(41, 133, 207);
+    border-radius: 1rem;
+    margin-bottom: 5%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 50%;
+
+}
+
+.final-cart {
+    color: white;
+    font-family: 'Arvo', serif;
+    width: 80%;
+    padding: 10%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.final-detail-product {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, #213547 0%, white 50%, white 50%, #213547 100%);
+    border-image-slice: 1;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.final-detail-product img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.orderid {
+    font-size: 2.5rem;
+    color: rgb(20, 252, 221);
+    font-family: 'Arvo', serif;
+}

@@ -24,8 +24,8 @@ function App() {
               <Route path='/ecommerce-react/checkout' element={<Checkout />} />
               <Route path='*' element={<h1>Error 404 Not Found</h1>} />
             </Routes>
-        </BrowserRouter>
-      </CartProvider>
+      </BrowserRouter>
+    </CartProvider>
     </>
   )
 }
