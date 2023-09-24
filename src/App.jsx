@@ -17,11 +17,11 @@ function App() {
       <BrowserRouter>
             <NavBar />
             <Routes>
-              <Route path='/ecommerce-react/' element={<ItemListContainer greeting={"WELCOME"}/> }/>
-              <Route path='/ecommerce-react/category/:categoryId' element={<ItemListContainer greeting={'PRODUCTS BY CATEGORY'}/>} />
-              <Route path='/ecommerce-react/detail/:productId' element={<ItemDetailContainer />} />
-              <Route path='/ecommerce-react/cart' element={<Cart />} />
-              <Route path='/ecommerce-react/checkout' element={<Checkout />} />
+              <Route path='/' element={<ItemListContainer greeting={"WELCOME"}/> }/>
+              <Route path='/category/:categoryId' element={<ItemListContainer greeting={'PRODUCTS BY CATEGORY'}/>} />
+              <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path='/checkout' element={<Checkout />} />
               <Route path='*' element={<h1>Error 404 Not Found</h1>} />
             </Routes>
       </BrowserRouter>

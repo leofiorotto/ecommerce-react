@@ -28,16 +28,6 @@ const ItemDetailContainer = () => {
         }).finally (() => {
             setLoading(false)
         })
-        // fetchProductById(productId)
-        //     .then(response => {
-        //         setProduct(response)
-        //     })
-        //     .catch(error => {
-        //         console.log(error)
-        //     })
-        //     .finally(() => {
-        //         setLoading(false)
-        //     })
     }, [productId])
 
     if(loading) {
