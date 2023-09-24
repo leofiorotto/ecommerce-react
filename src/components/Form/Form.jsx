@@ -32,7 +32,7 @@ const Form = ({ onConfirm }) => {
           </div>
         </form>
 
-        <Link to='/ecommerce-react/cart'>Back to cart</Link>
+        <Link to='/cart'>Back to cart</Link>
       </div>
       <Footer />
     </>

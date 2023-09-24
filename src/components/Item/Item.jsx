@@ -32,7 +32,7 @@ const Item = ({ id, name, img, price, category }) => {
       </div>
 
         <footer className='Item-footer'>
-        <Link to={`/ecommerce-react/detail/${id}`}><b>View</b></Link>
+        <Link to={`/detail/${id}`}><b>View</b></Link>
         </footer>
         
       </article>

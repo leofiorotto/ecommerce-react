@@ -36,8 +36,8 @@ const ItemDetail = ({ id, name, category, img, price, stock, scanCollection, NFT
                     <img className='img-detail' src={img} alt={name}/>
                 </header>
                 <div className='DescriptionDetail'>
-                    <Link to={`/ecommerce-react/category/${category}`}>Back to collection</Link>
-                    <Link to={`/ecommerce-react/`}>Back to home</Link>
+                    <Link to={`/category/${category}`}>Back to collection</Link>
+                    <Link to={`/`}>Back to home</Link>
                     <section> 
                         <div className='price-detail'>
                             <b className='price'>{price} ETH</b><br />

@@ -55,7 +55,7 @@ const Cart = () => {
                     <h2 className='total'>Total: {totalPrice}</h2>
                     <img className='img-eth-cart' src={ethLogo} alt="" />
                 </div>
-                <Link className='btn-checkout' to='/ecommerce-react/checkout'>Go to buy</Link>   
+                <Link className='btn-checkout' to='/checkout'>Go to buy</Link>   
 
             </div>
 

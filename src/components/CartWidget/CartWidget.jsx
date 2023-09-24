@@ -11,7 +11,7 @@ const { total } = useCart()
   const navigate = useNavigate()
 
   return (
-    <button className='btn-cart' onClick={() => navigate('/ecommerce-react/cart')}>
+    <button className='btn-cart' onClick={() => navigate('/cart')}>
          <span className='quantity-cart'>{total}</span>
         <img src={cart} className='icon-cart' alt='logo-widget'/>
     </button>

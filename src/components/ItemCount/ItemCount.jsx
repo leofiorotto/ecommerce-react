@@ -43,7 +43,7 @@ const ItemCount = ({ stock, onAdd }) => {
   return (
     <div>
       {mostrarCarrito ? (
-        <Link to='/ecommerce-react/cart' style={{background:'white', color:'black', padding:'1rem', borderRadius:'1rem', position:'relative', left:'43%'}} >Go to cart</Link>
+        <Link to='/cart' style={{background:'white', color:'black', padding:'1rem', borderRadius:'1rem', position:'relative', left:'43%'}} >Go to cart</Link>
       ) : (
         <div className='controls'>
           <button onClick={increase} className='btnAdd'>+</button>
