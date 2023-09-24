@@ -5,6 +5,7 @@ import Form from '../Form/Form';
 import { useCart } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import './Checkout.css'
+import Footer from '../footer/footer';
 
 
 const Checkout = () => {
@@ -78,7 +79,14 @@ const Checkout = () => {
   
   
   if (loading) {
-    return <h1>Generating your order</h1>
+    return  (
+      <>    
+        <h1>Generating your order</h1>
+        <span className="loader"></span>
+      </>
+
+    )
+
   }  
   if (orderId) {
     return (
@@ -86,32 +94,29 @@ const Checkout = () => {
       <h1>Details of your purchase</h1>
       <h2 className='orderid'>Your order id is: <br /> <b>{orderId}</b></h2>
       <div className='container-checkpoint'>
-      <div className='final-form'>
-        <h2>Your data:</h2>
-        <p>Name: {name}</p>
-        <p>Lastname: {lastname}</p>
-        <p>Phone: {phone}</p>
-        <p>Email: {email}</p>
-      </div>
-      <div className='final-cart'>
-        <h2>Purchased products:</h2>
-        {orderedItems.map(item => (
-          <div className='final-detail-product' key={item.id}>
-            <img src={item.img} alt="img-prod" />
-            <div>
-              <p>Product: {item.name}</p>
-              <p>Quantity: {item.quantity}</p>
-              <p>Price: ${item.price}</p>
+        <div className='final-form'>
+          <h2 className='your-data'>Your data:</h2>
+          <p>Name: {name}</p>
+          <p>Lastname: {lastname}</p>
+          <p>Phone: {phone}</p>
+          <p>Email: {email}</p>
+        </div>
+        <div className='final-cart'>
+          <h2>Purchased products:</h2>
+          {orderedItems.map(item => (
+            <div className='final-detail-product' key={item.id}>
+              <img src={item.img} alt="img-prod" />
+              <div>
+                <p>Product: {item.name}</p>
+                <p>Quantity: {item.quantity}</p>
+                <p>Price: ${item.price}</p>
+              </div>  
             </div>
-          </div>
-        ))}
-      </div>
-
-
+          ))}
+        </div>
       </div>
         <h1>Thanks for your purchase</h1>
-     
-
+        <Footer />
     </>
     ); 
   }
@@ -121,6 +126,7 @@ const Checkout = () => {
   return (
     <>
       <Form onConfirm={createOrder} />
+      
     </>
   )
 }

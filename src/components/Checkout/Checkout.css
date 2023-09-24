@@ -10,13 +10,10 @@
 .final-form {
     color: white;
     font-family: 'Arvo', serif;
-    border: 1px solid rgb(41, 133, 207);
-    border-radius: 1rem;
-    margin-bottom: 5%;
+    width: 80%;
+    padding: 10%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 50%;
-
 }
 
 .final-cart {
@@ -48,4 +45,10 @@
     font-size: 2.5rem;
     color: rgb(20, 252, 221);
     font-family: 'Arvo', serif;
+}
+
+.your-data {
+    border-bottom: 1px solid;
+    border-image: linear-gradient(to right, #213547 0%, white 50%, white 50%, #213547 100%);
+    border-image-slice: 1;
 }

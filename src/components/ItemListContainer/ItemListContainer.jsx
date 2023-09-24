@@ -36,17 +36,6 @@ const ItemListContainer = ({greeting}) => {
             }).finally (() => {
                 setLoading(false)
             })
-    
-
-        // const asyncFunct = categoryId ? fetchProductsByCategory : fetchProducts
-       
-        // asyncFunct(categoryId)
-        //     .then (response => {
-        //         setProducts(response)
-        //     })
-        //     .catch (error => {
-        //         console.error(error)
-        //     })
     }, [categoryId])
 
     if(loading) {
