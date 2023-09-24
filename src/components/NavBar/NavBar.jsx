@@ -1,6 +1,6 @@
 import classes from './NavBar.css'
 import CartWidget from "../CartWidget/CartWidget"
-import "./NavBar.css";
+import "./NavBar.css"
 import logo from '../../assets/fiorosea.png'
 import { NavLink, useNavigate } from 'react-router-dom'
 
