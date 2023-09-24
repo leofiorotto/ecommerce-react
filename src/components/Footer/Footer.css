@@ -1,0 +1,56 @@
+.wrapper {
+    background-color: black;
+    height: 50vh;
+    width: 100%;
+}
+
+.container-footer {
+    display: flex;
+    border-bottom: 1px solid #707070;;
+
+}
+
+.social-icons {
+    background-color: black;
+    color: white;
+    height: 10vh;
+}
+
+.social-icons > * {
+    cursor: pointer;
+    height: 60%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.row1 {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    }
+
+.row1 img {
+    padding: 2rem;
+    width: 40%;
+    margin-top: 2rem;
+}
+
+.row1 p {
+    width: 80%;
+    padding: 1rem;
+    color: #afafaf;
+}
+
+
+.row2 {
+    display: flex;
+    width: 100%;
+    color: #afafaf;
+    justify-content: space-around;
+}
+
+.row2-1 {
+    color: #afafaf;
+}
