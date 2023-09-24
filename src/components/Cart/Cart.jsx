@@ -2,7 +2,7 @@ import { useCart } from '../../context/CartContext';
 import { Link } from "react-router-dom";
 import './Cart.css';
 import ethLogo from '../../assets/eth-logo.png';
-import Footer from '../footer/footer';
+import Footer from '../Footer/Footer';
 
 const Cart = () => {
     const { cart, removeItem, clearCart, total } = useCart();

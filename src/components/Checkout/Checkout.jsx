@@ -5,7 +5,7 @@ import Form from '../Form/Form';
 import { useCart } from '../../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import './Checkout.css'
-import Footer from '../footer/footer';
+import Footer from '../Footer/Footer';
 
 
 const Checkout = () => {

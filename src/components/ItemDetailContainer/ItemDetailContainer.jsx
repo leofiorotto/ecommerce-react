@@ -5,7 +5,7 @@ import { useParams } from "react-router-dom"
 import { db } from "../../services/firebase/firebaseConfig"
 import { getDoc, doc, QueryDocumentSnapshot } from "firebase/firestore"
 import './ItemDetailContainer.css'
-import Footer from "../footer/footer"
+import Footer from "../Footer/Footer"
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState(null)

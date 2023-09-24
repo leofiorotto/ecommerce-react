@@ -1,7 +1,7 @@
 import './Form.css';
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Footer from '../footer/footer';
+import Footer from '../Footer/Footer';
 
 const Form = ({ onConfirm }) => {
   const [name, setName] = useState('');
