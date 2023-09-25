@@ -9,7 +9,7 @@ Este es un proyecto de un marketplace de NFTs construido con React y Vite. Permi
 - Agregar productos al carrito.
 - Comprar productos y generar órdenes de compra.
 
-## Capturas de pantalla
+## Vista previa
 
 ![image](https://github.com/leofiorotto/ecommerce-react/assets/70485779/23b62810-5416-4692-9c67-b3da34c2013f)
 
@@ -24,25 +24,29 @@ Este es un proyecto de un marketplace de NFTs construido con React y Vite. Permi
 1. Clona este repositorio.
 git clone https://github.com/leofiorotto/ecommerce-react.git
 
-2.Navega al directorio del proyecto.
+2. Navega al directorio del proyecto.
 cd react-vite-nft-marketplace
 
-3.Instala las dependencias.
+3. Instala las dependencias.
 npm install
 
-4.Inicia el servidor de desarrollo.
+4. Inicia el servidor de desarrollo.
 npm run dev
 
 ## Contacto
 Para cualquier pregunta o sugerencia, no dudes en contactarme:
 
-Nombre: Leandro Fiorotto
-Correo Electrónico: leo.fiorotto@hotmail.com
+- Nombre: Leandro Fiorotto
+- Email: leo.fiorotto@hotmail.com
 
+## Variables de entorno
 
-
-
-
+- VITE_apiKey=
+- VITE_authDomain=
+- VITE_projectId=
+- VITE_storageBucket=
+- VITE_messagingSenderId=
+- VITE_appId=
 
 
 
