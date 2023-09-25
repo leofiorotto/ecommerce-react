@@ -38,6 +38,16 @@ section {
     align-items: center;
     margin-left: 2rem;
     padding-bottom: 5rem;
+}
+
+.back-to {
+  color: rgb(0, 162, 255);
+  text-decoration: underline;
+  
+}
+
+.back-to.under {
+  text-decoration: underline;
 
 }
 

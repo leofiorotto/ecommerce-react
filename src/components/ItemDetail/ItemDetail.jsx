@@ -36,20 +36,20 @@ const ItemDetail = ({ id, name, category, img, price, stock, scanCollection, NFT
                     <img className='img-detail' src={img} alt={name}/>
                 </header>
                 <div className='DescriptionDetail'>
-                    <Link to={`/category/${category}`}>Back to collection</Link>
-                    <Link to={`/`}>Back to home</Link>
+                    <Link className='back-to' to={`/category/${category}`}>Back to collection</Link>
+                    <Link to={`/`} className='back-to'>Back to home</Link>
                     <section> 
                         <div className='price-detail'>
                             <b className='price'>{price} ETH</b><br />
                             <img src={ethlogo} alt="eth-logo" style={{ width: '60px', height: '50px' }} /><br />
                         </div>
                         <div className='info-detail'>
-                            <a href={scanCollection}>Contract {category}</a><br />
-                            <a href={NFTcollection}>View history of {name}</a><br />
+                            <a href={scanCollection} className='back-to'>Contract {category}</a><br />
+                            <a href={NFTcollection} className='back-to'>View history of {name}</a><br />
                         </div>
                         <div style={{ display:'flex',gap:'1rem',color:'white',fontSize:'1.1rem', marginBottom: '1%'}}> 
-                            <p>👁️ 42 view</p>
-                            <p>♡ 1 favorite</p>
+                            <p>👁️  {Math.floor(Math.random() * 100)} views</p>
+                            <p>♡ {Math.floor(Math.random() * 10)} favorite</p>
                         </div>
                         <ItemCount onAdd={handleOnAdd} stock={stock}/>
                         <div className='price-history'>
