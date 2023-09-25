@@ -2,10 +2,9 @@ import { useEffect, useState } from "react"
 import ItemList from "../ItemList/ItemList"
 import "./ItemListContainer.css"
 import { useParams } from "react-router-dom"
-import { db } from "../../services/firebase/firebaseConfig"
 import Footer from "../Footer/Footer"
 
-import { getDocs, collection, query, where } from "firebase/firestore"
+import { getProducts } from "../../services/firebase/firestore/products"
 
 const ItemListContainer = ({greeting}) => {
 
@@ -19,22 +18,15 @@ const ItemListContainer = ({greeting}) => {
     useEffect ( () => {
         setLoading(true)
 
-
-        const productsRef = !categoryId
-            ? collection(db, 'products')
-            : query (collection(db, 'products'), where('category', '==', categoryId))
-        getDocs(productsRef)
-            .then(QuerySnapshot => {
-                const productsAdapted = QuerySnapshot.docs.map(doc => {
-                    const fields = doc.data()
-                    return { id: doc.id, ...fields}
-                })
-                setProducts(productsAdapted);
-            }).catch (error => {
-                console.error(error)
-            }).finally (() => {
-                setLoading(false)
-            })
+        getProducts(categoryId)
+            .then (products => {
+                setProducts(products)
+        }).catch (error => {
+            console.error(error)
+        }).finally (() => {
+            setLoading(false)
+        })
+     
     }, [categoryId])
 
     if(loading) {
